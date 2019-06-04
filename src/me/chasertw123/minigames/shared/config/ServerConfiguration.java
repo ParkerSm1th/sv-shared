@@ -15,10 +15,6 @@ public class ServerConfiguration {
     private static final String SERVER_URL = "http://hiett.digital/minecraft/?authcode=C823AE65C85A8FC9965B2D0F499086A475119" +
             "853D257C0486B4F0B6912C1E6614CE88CE250A81748E07639D4D31F2895FFEF8E51AC0810834AE8E47F97EE25E3";
 
-    // MYSQL LOGIN INFO
-    private String sqlUsername, sqlPassword, sqlHost, sqlDatabase;
-    private int sqlPort;
-
     // MONGO LOGIN INFO
     private String mongoUsername, mongoPassword, mongoHost, mongoDatabase;
     private int mongoPort;
@@ -42,13 +38,6 @@ public class ServerConfiguration {
 
             Document document = Document.parse(sb.toString());
             Document databases = (Document) document.get("databases");
-
-            Document sqlInfo = (Document) databases.get("sql");
-            this.sqlUsername = sqlInfo.getString("username");
-            this.sqlPassword = sqlInfo.getString("password");
-            this.sqlHost = sqlInfo.getString("host");
-            this.sqlPort = sqlInfo.getInteger("port");
-            this.sqlDatabase = sqlInfo.getString("database");
 
             Document mongoInfo = (Document) databases.get("mongo");
             this.mongoUsername = mongoInfo.getString("username");
@@ -79,26 +68,6 @@ public class ServerConfiguration {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public String getSqlUsername() {
-        return sqlUsername;
-    }
-
-    public String getSqlPassword() {
-        return sqlPassword;
-    }
-
-    public String getSqlHost() {
-        return sqlHost;
-    }
-
-    public int getSqlPort() {
-        return sqlPort;
-    }
-
-    public String getSqlDatabase() {
-        return sqlDatabase;
     }
 
     public String getMongoUsername() {
