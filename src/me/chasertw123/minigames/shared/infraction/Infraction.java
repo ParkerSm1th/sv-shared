@@ -1,7 +1,7 @@
 package me.chasertw123.minigames.shared.infraction;
 
+import com.sun.istack.internal.NotNull;
 import org.bson.Document;
-import org.jetbrains.annotations.NotNull;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
