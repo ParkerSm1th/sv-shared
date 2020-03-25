@@ -1,7 +1,6 @@
 package io.parkersmith.sunverse.shared.database;
 
 import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoCollection;
