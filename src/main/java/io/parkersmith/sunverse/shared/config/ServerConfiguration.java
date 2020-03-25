@@ -21,7 +21,7 @@ public class ServerConfiguration {
         this.mongoPort = 27017;
         this.mongoDatabase = "Server";
 
-        this.prefix = ChatColor.translateAlternateColorCodes('&', "&e[SV]");
+        this.prefix = ChatColor.translateAlternateColorCodes('&', "&6&lSV &r&8» ");
 
         this.sbTitle = "Sunverse";
         this.sbNormalFormat = ChatColor.translateAlternateColorCodes('&', "&6");
