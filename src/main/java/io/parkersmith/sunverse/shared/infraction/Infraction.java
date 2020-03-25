@@ -1,6 +1,6 @@
 package io.parkersmith.sunverse.shared.infraction;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 import org.bson.Document;
 
 import java.text.SimpleDateFormat;
